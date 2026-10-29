@@ -1,0 +1,21 @@
+==========================================
+System Monitoring Report
+Student Full Name: Zholdas Zhannura
+Date and Time    : 2026-10-29 20:22:57
+Current Username : root
+OS & Kernel      : Linux 6.18.40.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026
+------------------------------------------
+CPU Information:
+model name	: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+------------------------------------------
+Memory Information:
+              total        used        free      shared  buff/cache   available
+Mem:           7.6G        1.2G        6.0G       17.6M      479.4M        6.3G
+Swap:          2.0G           0        2.0G
+------------------------------------------
+Disk Usage:
+Filesystem                Size      Used Available Use% Mounted on
+/dev/sde                136.0M     70.8M     54.7M  56% /
+------------------------------------------
+Available Disk Space: 54.7M
+==========================================
