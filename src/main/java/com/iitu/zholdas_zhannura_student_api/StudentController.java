@@ -1,16 +1,22 @@
 package com.iitu.zholdas_zhannura_student_api;
 
+import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
 
     private final StudentRepository repository;
+
+    @Value("${app.version}")
+    private String version;
 
     public StudentController(StudentRepository repository) {
         this.repository = repository;
@@ -22,9 +28,17 @@ public class StudentController {
         return "DevOps Midterm Project - Student API by Zholdas Zhannura";
     }
 
+    @GetMapping("/version")
+    public Map<String, String> getVersion() {
+        return Map.of("application", "zholdas-zhannura-student-api", "version", version,
+                "student", "Zhannura Zholdas", "group", "IT2-2306", "studentId", "37742");
+    }
+
     // 1. Создать студента
     @PostMapping
-    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
+    public ResponseEntity<Student> createStudent(@Valid @RequestBody Student student) {
+        // IDs are allocated by the database; POST must never overwrite an existing row.
+        student.setId(null);
         Student saved = repository.save(student);
         return new ResponseEntity<>(saved, HttpStatus.CREATED);
     }
@@ -45,7 +59,7 @@ public class StudentController {
 
     // 4. Обновить данные студента
     @PutMapping("/{id}")
-    public ResponseEntity<Student> updateStudent(@PathVariable Long id, @RequestBody Student updated) {
+    public ResponseEntity<Student> updateStudent(@PathVariable Long id, @Valid @RequestBody Student updated) {
         return repository.findById(id).map(student -> {
             student.setName(updated.getName());
             student.setEmail(updated.getEmail());
