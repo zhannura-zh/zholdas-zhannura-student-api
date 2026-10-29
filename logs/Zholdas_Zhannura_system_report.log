@@ -1,21 +1,25 @@
-==========================================
 System Monitoring Report
 Student Full Name: Zholdas Zhannura
-Date and Time    : 2026-10-29 20:22:57
-Current Username : root
-OS & Kernel      : Linux 6.18.40.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026
-------------------------------------------
+Date and Time: 2026-10-29T22:59:49+00:00
+Current Username: jenkins
+OS and Kernel: Linux 1996b994c08a 6.18.40.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.7
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
 CPU Information:
-model name	: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
-------------------------------------------
+11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
 Memory Information:
-              total        used        free      shared  buff/cache   available
-Mem:           7.6G        1.2G        6.0G       17.6M      479.4M        6.3G
-Swap:          2.0G           0        2.0G
-------------------------------------------
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       2.6Gi       1.0Gi        47Mi       4.3Gi       5.0Gi
+Swap:          2.0Gi       692Ki       2.0Gi
 Disk Usage:
-Filesystem                Size      Used Available Use% Mounted on
-/dev/sde                136.0M     70.8M     54.7M  56% /
-------------------------------------------
-Available Disk Space: 54.7M
-==========================================
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdf       1007G   11G  946G   2% /var/jenkins_home
+Available Disk Space: 946G

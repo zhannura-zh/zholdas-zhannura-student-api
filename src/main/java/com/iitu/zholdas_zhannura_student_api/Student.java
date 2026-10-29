@@ -1,6 +1,9 @@
 package com.iitu.zholdas_zhannura_student_api;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "students")
@@ -11,9 +14,14 @@ public class Student {
     private Long id;
 
     @Column(nullable = false)
+    @NotBlank
+    @Size(max = 100)
     private String name;
 
     @Column(nullable = false, unique = true)
+    @NotBlank
+    @Email
+    @Size(max = 254)
     private String email;
 
     public Student() {}
