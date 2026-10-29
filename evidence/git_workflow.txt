@@ -1,0 +1,85 @@
+$ git remote -v
+origin	https://github.com/zhannura-zh/zholdas-zhannura-student-api.git (fetch)
+origin	https://github.com/zhannura-zh/zholdas-zhannura-student-api.git (push)
+
+$ git log --oneline --graph --all -n 22
+* 184721a fix: remove controlled failing test for Zhannura Zholdas
+* 61273fa test: demonstrate controlled CI failure for Zhannura Zholdas
+*   c469d69 merge: deliver tested CRUD and DevOps workflow for Zhannura Zholdas
+|\  
+| * 1da669f ci: complete Docker Linux and five-stage Jenkins checks for Zhannura Zholdas
+| * 81f6ce1 feat: validate Student CRUD and add 16 tests for Zhannura Zholdas
+|/  
+* 2ddfb4e fix: replace toolchain with sourceCompatibility in build.gradle
+* ace72fa fix: set java 17 toolchain and update Jenkinsfile by Zholdas Zhannura
+* c1604c4 ci: configure Jenkinsfile pipeline by Zholdas Zhannura
+*   8a8c639 fix: resolve merge conflict in README.md by Zholdas Zhannura
+|\  
+| * 6f4df89 docs: modify header in documentation branch by Zholdas Zhannura
+* | 23d5004 docs: modify header in main branch by Zholdas Zhannura
+|/  
+* d3e370a docs: update API documentation by Zholdas Zhannura
+* 830135e feat: add CRUD operations description by Zholdas Zhannura
+* 1ab90e1 Initial commit: Zholdas Zhannura Student API
+
+$ git branch -av
+  feature/zholdas-zhannura-ci-failure                   184721a fix: remove controlled failing test for Zhannura Zholdas
+  feature/zholdas-zhannura-crud                         1da669f ci: complete Docker Linux and five-stage Jenkins checks for Zhannura Zholdas
+  feature/zholdas-zhannura-documentation                6f4df89 docs: modify header in documentation branch by Zholdas Zhannura
+* main                                                  c469d69 merge: deliver tested CRUD and DevOps workflow for Zhannura Zholdas
+  remotes/origin/feature/zholdas-zhannura-ci-failure    184721a fix: remove controlled failing test for Zhannura Zholdas
+  remotes/origin/feature/zholdas-zhannura-crud          1da669f ci: complete Docker Linux and five-stage Jenkins checks for Zhannura Zholdas
+  remotes/origin/feature/zholdas-zhannura-documentation 6f4df89 docs: modify header in documentation branch by Zholdas Zhannura
+  remotes/origin/main                                   c469d69 merge: deliver tested CRUD and DevOps workflow for Zhannura Zholdas
+
+$ git tag -n
+v1.0-zholdas-zhannura Release version 1.0 by Zholdas Zhannura
+
+$ git show --cc 8a8c639 -- README.md
+commit 8a8c639a67b1f4d9db81db8a122547b37352b390
+Merge: 23d5004 6f4df89
+Author: Zholdas Zhannura <zholdaszhannura@gmail.com>
+Date:   Fri Oct 30 01:56:06 2026 +0500
+
+    fix: resolve merge conflict in README.md by Zholdas Zhannura
+
+diff --cc README.md
+index 42a5558,576b0c3..bf56e64
+--- a/README.md
++++ b/README.md
+@@@ -1,1 -1,1 +1,1 @@@
+- Main version by Zholdas Zhannura (Main Branch)
+ -Documentation version by Zholdas Zhannura (Feature Branch)
+++# Student API Project - Maintained and Documented by Zholdas Zhannura
+
+$ git show 81f6ce1 --stat
+commit 81f6ce1bfdf08e26370b0511662506d363652417
+Author: Zholdas Zhannura <zholdaszhannura@gmail.com>
+Date:   Fri Oct 30 03:54:57 2026 +0500
+
+    feat: validate Student CRUD and add 16 tests for Zhannura Zholdas
+
+ README.md                                          | 127 ++++++++++++++++++++-
+ build.gradle                                       |   9 +-
+ .../ApiExceptionHandler.java                       |  18 +++
+ .../iitu/zholdas_zhannura_student_api/Student.java |  10 +-
+ .../StudentController.java                         |  18 ++-
+ src/main/resources/application.properties          |  10 +-
+ .../StudentApiTests.java                           | 118 +++++++++++++++++++
+ src/test/resources/application.properties          |   7 ++
+ 8 files changed, 307 insertions(+), 10 deletions(-)
+
+$ git diff 1ab90e1 d3e370a -- README.md
+diff --git a/README.md b/README.md
+index 4445df8..e2ea056 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,5 @@
+ # Student API Project by Zholdas Zhannura
++
++Added CRUD operations for Student entity by Zholdas Zhannura
++
++API Endpoints documentation updated by Zholdas Zhannura
+
+$ git check-ignore .env
+.env

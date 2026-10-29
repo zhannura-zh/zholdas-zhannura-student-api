@@ -1,0 +1,135 @@
+[
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:18080/api/students/info",
+    "request": null,
+    "status": 200,
+    "response": "DevOps Midterm Project - Student API by Zholdas Zhannura"
+  },
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:18080/api/students/version",
+    "request": null,
+    "status": 200,
+    "response": {
+      "studentId": "37742",
+      "version": "1.1.0",
+      "student": "Zhannura Zholdas",
+      "application": "zholdas-zhannura-student-api",
+      "group": "IT2-2306"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:18080/api/students",
+    "request": {
+      "name": "Zhannura Zholdas",
+      "email": "zhannura.midterm.1793314901@example.test"
+    },
+    "status": 201,
+    "response": {
+      "name": "Zhannura Zholdas",
+      "email": "zhannura.midterm.1793314901@example.test",
+      "id": 3
+    }
+  },
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:18080/api/students",
+    "request": null,
+    "status": 200,
+    "response": [
+      {
+        "name": "Zhannura Zholdas",
+        "email": "zhannura.midterm.1793314901@example.test",
+        "id": 3
+      }
+    ],
+    "total_response_records": 2,
+    "response_scope": "Only the assessment-created record is shown; unrelated existing records are omitted."
+  },
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:18080/api/students/3",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "Zhannura Zholdas",
+      "email": "zhannura.midterm.1793314901@example.test",
+      "id": 3
+    }
+  },
+  {
+    "method": "PUT",
+    "url": "http://127.0.0.1:18080/api/students/3",
+    "request": {
+      "name": "Zhannura Zholdas Updated",
+      "email": "zhannura.midterm.1793314901@example.test"
+    },
+    "status": 200,
+    "response": {
+      "name": "Zhannura Zholdas Updated",
+      "email": "zhannura.midterm.1793314901@example.test",
+      "id": 3
+    }
+  },
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:18080/api/students/999999999",
+    "request": null,
+    "status": 404,
+    "response": ""
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:18080/api/students",
+    "request": {
+      "name": "",
+      "email": "invalid"
+    },
+    "status": 400,
+    "response": {
+      "timestamp": "2026-10-29T23:01:43.156Z",
+      "status": 400,
+      "error": "Bad Request",
+      "path": "/api/students"
+    }
+  },
+  {
+    "method": "POST",
+    "url": "http://127.0.0.1:18080/api/students",
+    "request": {
+      "name": "Duplicate",
+      "email": "zhannura.midterm.1793314901@example.test"
+    },
+    "status": 409,
+    "response": {
+      "error": "A student with this email already exists."
+    }
+  },
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:18080/api/students/3",
+    "request": null,
+    "status": 200,
+    "response": {
+      "name": "Zhannura Zholdas Updated",
+      "email": "zhannura.midterm.1793314901@example.test",
+      "id": 3
+    }
+  },
+  {
+    "method": "DELETE",
+    "url": "http://127.0.0.1:18080/api/students/3",
+    "request": null,
+    "status": 204,
+    "response": ""
+  },
+  {
+    "method": "GET",
+    "url": "http://127.0.0.1:18080/api/students/3",
+    "request": null,
+    "status": 404,
+    "response": ""
+  }
+]

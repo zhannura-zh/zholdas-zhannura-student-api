@@ -1,0 +1,56 @@
+{
+  "Id": "81ea0b0b1e4b0cd5a83edce9b9a997e0d6467ce4797713d6ffa8485a4ecb1c86",
+  "Image": "sha256:193a75b700e085599363b2fdd518eba9d20624f9239b0a293277f4c17070fc69",
+  "State": {
+    "Status": "running",
+    "Running": true,
+    "Paused": false,
+    "Restarting": false,
+    "OOMKilled": false,
+    "Dead": false,
+    "Pid": 26090,
+    "ExitCode": 0,
+    "Error": "",
+    "StartedAt": "2026-10-29T22:58:43.159722533Z",
+    "FinishedAt": "0001-01-01T00:00:00Z"
+  },
+  "Mounts": [],
+  "NetworkSettings": {
+    "SandboxID": "51eccde9995e9aa9965c8cbfd2114dfa1836c4d63d583947ae6c064e59cd7818",
+    "SandboxKey": "/var/run/docker/netns/51eccde9995e",
+    "Ports": {
+      "8080/tcp": [
+        {
+          "HostIp": "127.0.0.1",
+          "HostPort": "18080"
+        }
+      ]
+    },
+    "Networks": {
+      "zholdas_student_network": {
+        "IPAMConfig": null,
+        "Links": null,
+        "Aliases": [
+          "zholdas-student-api",
+          "student-api"
+        ],
+        "DriverOpts": null,
+        "GwPriority": 0,
+        "NetworkID": "e9636a1a9978c7bf7cef9a78a014acba40f1325ff9304c19d1bd5d7cd9550172",
+        "EndpointID": "accf4299d92d7665ce94e76df528678db37d487cd8906718504e01e68221c076",
+        "Gateway": "172.20.0.1",
+        "IPAddress": "172.20.0.3",
+        "MacAddress": "ae:4b:d2:3d:fc:b7",
+        "IPPrefixLen": 16,
+        "IPv6Gateway": "",
+        "GlobalIPv6Address": "",
+        "GlobalIPv6PrefixLen": 0,
+        "DNSNames": [
+          "zholdas-student-api",
+          "student-api",
+          "81ea0b0b1e4b"
+        ]
+      }
+    }
+  }
+}

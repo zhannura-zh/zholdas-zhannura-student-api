@@ -1,0 +1,337 @@
+Started by user Жаннура Жолдас
+Started by an SCM change
+Obtained Jenkinsfile from git https://github.com/zhannura-zh/zholdas-zhannura-student-api.git
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/jenkins_home/workspace/Zholdas_Zhannura_Student_API
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] timestamps
+[Pipeline] {
+[Pipeline] timeout
+[2026-10-29T23:01:10.980Z] Timeout set to expire in 20 min
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] checkout
+[2026-10-29T23:01:11.233Z] Selected Git installation does not exist. Using Default
+[2026-10-29T23:01:11.233Z] The recommended git tool is: NONE
+[2026-10-29T23:01:11.233Z] No credentials specified
+[2026-10-29T23:01:11.235Z] Cloning the remote Git repository
+[2026-10-29T23:01:11.237Z] Cloning repository https://github.com/zhannura-zh/zholdas-zhannura-student-api.git
+[2026-10-29T23:01:11.242Z]  > git init /var/jenkins_home/workspace/Zholdas_Zhannura_Student_API # timeout=10
+[2026-10-29T23:01:11.335Z] Fetching upstream changes from https://github.com/zhannura-zh/zholdas-zhannura-student-api.git
+[2026-10-29T23:01:11.335Z]  > git --version # timeout=10
+[2026-10-29T23:01:11.344Z]  > git --version # 'git version 2.47.3'
+[2026-10-29T23:01:11.345Z]  > git fetch --tags --force --progress -- https://github.com/zhannura-zh/zholdas-zhannura-student-api.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2026-10-29T23:01:12.785Z]  > git config remote.origin.url https://github.com/zhannura-zh/zholdas-zhannura-student-api.git # timeout=10
+[2026-10-29T23:01:12.794Z]  > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+[2026-10-29T23:01:12.817Z] Avoid second fetch
+[2026-10-29T23:01:12.821Z]  > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+[2026-10-29T23:01:12.832Z] Checking out Revision c469d690f49db2a11dc3b0e51c9843eece160684 (refs/remotes/origin/main)
+[2026-10-29T23:01:12.836Z]  > git config core.sparsecheckout # timeout=10
+[2026-10-29T23:01:12.849Z]  > git checkout -f c469d690f49db2a11dc3b0e51c9843eece160684 # timeout=10
+[2026-10-29T23:01:12.909Z] Commit message: "merge: deliver tested CRUD and DevOps workflow for Zhannura Zholdas"
+[2026-10-29T23:01:12.915Z]  > git rev-list --no-walk 2ddfb4e57941c393dfb277fb13a263d959001012 # timeout=10
+[Pipeline] echo
+[2026-10-29T23:01:13.091Z] Student: Zhannura Zholdas; Group: IT2-2306; Student ID: 37742
+[Pipeline] sh
+[2026-10-29T23:01:13.421Z] + git rev-parse HEAD
+[2026-10-29T23:01:13.421Z] c469d690f49db2a11dc3b0e51c9843eece160684
+[2026-10-29T23:01:13.421Z] + java -version
+[2026-10-29T23:01:13.421Z] openjdk version "21.0.13" 2026-10-20 LTS
+[2026-10-29T23:01:13.421Z] OpenJDK Runtime Environment Temurin-21.0.13+9 (build 21.0.13+9-LTS)
+[2026-10-29T23:01:13.421Z] OpenJDK 64-Bit Server VM Temurin-21.0.13+9 (build 21.0.13+9-LTS, mixed mode)
+[2026-10-29T23:01:13.421Z] + docker version
+[2026-10-29T23:01:13.421Z] Client:
+[2026-10-29T23:01:13.421Z]  Version:           29.2.1
+[2026-10-29T23:01:13.421Z]  API version:       1.53
+[2026-10-29T23:01:13.422Z]  Go version:        go1.25.6
+[2026-10-29T23:01:13.422Z]  Git commit:        a5c7197
+[2026-10-29T23:01:13.422Z]  Built:             Mon Feb  2 17:16:41 2026
+[2026-10-29T23:01:13.422Z]  OS/Arch:           linux/amd64
+[2026-10-29T23:01:13.422Z]  Context:           default
+[2026-10-29T23:01:13.422Z] 
+[2026-10-29T23:01:13.422Z] Server: Docker Desktop 4.61.0 (219004)
+[2026-10-29T23:01:13.422Z]  Engine:
+[2026-10-29T23:01:13.422Z]   Version:          29.2.1
+[2026-10-29T23:01:13.422Z]   API version:      1.53 (minimum version 1.44)
+[2026-10-29T23:01:13.422Z]   Go version:       go1.25.6
+[2026-10-29T23:01:13.422Z]   Git commit:       6bc6209
+[2026-10-29T23:01:13.422Z]   Built:            Mon Feb  2 17:17:24 2026
+[2026-10-29T23:01:13.422Z]   OS/Arch:          linux/amd64
+[2026-10-29T23:01:13.422Z]   Experimental:     false
+[2026-10-29T23:01:13.422Z]  containerd:
+[2026-10-29T23:01:13.422Z]   Version:          v2.2.1
+[2026-10-29T23:01:13.422Z]   GitCommit:        dea7da592f5d1d2b7755e3a161be07f43fad8f75
+[2026-10-29T23:01:13.422Z]  runc:
+[2026-10-29T23:01:13.422Z]   Version:          1.3.4
+[2026-10-29T23:01:13.422Z]   GitCommit:        v1.3.4-0-gd6d73eb8
+[2026-10-29T23:01:13.422Z]  docker-init:
+[2026-10-29T23:01:13.422Z]   Version:          0.19.0
+[2026-10-29T23:01:13.423Z]   GitCommit:        de40ad0
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] sh
+[2026-10-29T23:01:13.936Z] + ./gradlew clean assemble --no-daemon --console=plain
+[2026-10-29T23:01:15.802Z] To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+[2026-10-29T23:01:18.291Z] Daemon will be stopped at the end of the build 
+[2026-10-29T23:01:33.059Z] > Task :clean
+[2026-10-29T23:01:35.547Z] > Task :compileJava
+[2026-10-29T23:01:35.547Z] > Task :processResources
+[2026-10-29T23:01:35.547Z] > Task :classes
+[2026-10-29T23:01:35.547Z] > Task :resolveMainClassName
+[2026-10-29T23:01:38.036Z] > Task :bootJar
+[2026-10-29T23:01:38.036Z] > Task :jar SKIPPED
+[2026-10-29T23:01:38.036Z] > Task :assemble
+[2026-10-29T23:01:38.036Z] 
+[2026-10-29T23:01:38.036Z] BUILD SUCCESSFUL in 23s
+[2026-10-29T23:01:38.036Z] 5 actionable tasks: 5 executed
+[2026-10-29T23:01:38.036Z] Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] sh
+[2026-10-29T23:01:38.516Z] + ./gradlew test --no-daemon --console=plain
+[2026-10-29T23:01:39.863Z] To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+[2026-10-29T23:01:41.728Z] Daemon will be stopped at the end of the build 
+[2026-10-29T23:01:53.840Z] > Task :compileJava UP-TO-DATE
+[2026-10-29T23:01:53.840Z] > Task :processResources UP-TO-DATE
+[2026-10-29T23:01:53.840Z] > Task :classes UP-TO-DATE
+[2026-10-29T23:02:01.884Z] > Task :compileTestJava
+[2026-10-29T23:02:01.885Z] > Task :processTestResources
+[2026-10-29T23:02:01.885Z] > Task :testClasses
+[2026-10-29T23:02:16.655Z] 
+[2026-10-29T23:02:16.655Z] > Task :test
+[2026-10-29T23:02:16.655Z] 
+[2026-10-29T23:02:16.655Z] StudentApiTests > duplicateEmailReturns409() PASSED
+[2026-10-29T23:02:16.655Z] 
+[2026-10-29T23:02:16.655Z] StudentApiTests > missingStudentReturns404() PASSED
+[2026-10-29T23:02:16.656Z] 
+[2026-10-29T23:02:16.656Z] StudentApiTests > blankNameReturns400() PASSED
+[2026-10-29T23:02:16.656Z] 
+[2026-10-29T23:02:16.656Z] StudentApiTests > updatesStudent() PASSED
+[2026-10-29T23:02:16.656Z] 
+[2026-10-29T23:02:16.656Z] StudentApiTests > createsStudent() PASSED
+[2026-10-29T23:02:16.656Z] 
+[2026-10-29T23:02:16.656Z] StudentApiTests > deleteMissingStudentReturns404() PASSED
+[2026-10-29T23:02:16.656Z] 
+[2026-10-29T23:02:16.656Z] StudentApiTests > retrievesStudentById() PASSED
+[2026-10-29T23:02:16.656Z] 
+[2026-10-29T23:02:16.656Z] StudentApiTests > invalidEmailReturns400() PASSED
+[2026-10-29T23:02:16.656Z] 
+[2026-10-29T23:02:16.657Z] StudentApiTests > deletesStudent() PASSED
+[2026-10-29T23:02:16.657Z] 
+[2026-10-29T23:02:16.657Z] StudentApiTests > postDoesNotOverwriteClientSuppliedId() PASSED
+[2026-10-29T23:02:16.657Z] 
+[2026-10-29T23:02:16.657Z] StudentApiTests > displaysStudentIdentity() PASSED
+[2026-10-29T23:02:16.657Z] 
+[2026-10-29T23:02:16.657Z] StudentApiTests > invalidUpdateDoesNotChangeRecord() PASSED
+[2026-10-29T23:02:16.657Z] 
+[2026-10-29T23:02:16.657Z] StudentApiTests > updateMissingStudentReturns404() PASSED
+[2026-10-29T23:02:16.657Z] 
+[2026-10-29T23:02:16.657Z] StudentApiTests > exposesPersonalizedVersion() PASSED
+[2026-10-29T23:02:16.657Z] 
+[2026-10-29T23:02:16.657Z] StudentApiTests > listsStudents() PASSED
+[2026-10-29T23:02:16.657Z] 
+[2026-10-29T23:02:16.657Z] ZholdasZhannuraStudentApiApplicationTests > contextLoads() PASSED
+[2026-10-29T23:02:16.657Z] 
+[2026-10-29T23:02:16.657Z] 2026-10-29T23:02:15.847Z  INFO 753 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-10-29T23:02:16.657Z] 2026-10-29T23:02:15.855Z  INFO 753 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+[2026-10-29T23:02:16.657Z] 2026-10-29T23:02:15.859Z  INFO 753 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[2026-10-29T23:02:16.657Z] 2026-10-29T23:02:15.863Z  INFO 753 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-10-29T23:02:16.657Z] 2026-10-29T23:02:15.865Z  INFO 753 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+[2026-10-29T23:02:16.657Z] 2026-10-29T23:02:15.870Z  INFO 753 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+[2026-10-29T23:02:16.658Z] 
+[2026-10-29T23:02:16.658Z] BUILD SUCCESSFUL in 37s
+[2026-10-29T23:02:16.658Z] 5 actionable tasks: 3 executed, 2 up-to-date
+[2026-10-29T23:02:16.658Z] Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
+Post stage
+[Pipeline] junit
+[2026-10-29T23:02:16.922Z] Recording test results
+[2026-10-29T23:02:17.140Z] [Checks API] No suitable checks publisher found.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Docker Build)
+[Pipeline] sh
+[2026-10-29T23:02:17.694Z] + git rev-parse HEAD
+[2026-10-29T23:02:17.694Z] + docker build --label org.opencontainers.image.revision=c469d690f49db2a11dc3b0e51c9843eece160684 --label org.opencontainers.image.authors=Zhannura Zholdas -t zholdas-zhannura-student-api:v1.1-zholdas-zhannura .
+[2026-10-29T23:02:17.946Z] #0 building with "default" instance using docker driver
+[2026-10-29T23:02:17.946Z] 
+[2026-10-29T23:02:17.946Z] #1 [internal] load build definition from Dockerfile
+[2026-10-29T23:02:18.198Z] #1 transferring dockerfile: 662B done
+[2026-10-29T23:02:18.198Z] #1 DONE 0.0s
+[2026-10-29T23:02:18.198Z] 
+[2026-10-29T23:02:18.198Z] #2 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre-alpine
+[2026-10-29T23:02:19.545Z] #2 ...
+[2026-10-29T23:02:19.545Z] 
+[2026-10-29T23:02:19.545Z] #3 [internal] load metadata for docker.io/library/eclipse-temurin:17-jdk-alpine
+[2026-10-29T23:02:19.545Z] #3 DONE 1.4s
+[2026-10-29T23:02:19.545Z] 
+[2026-10-29T23:02:19.545Z] #2 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre-alpine
+[2026-10-29T23:02:19.545Z] #2 DONE 1.4s
+[2026-10-29T23:02:19.545Z] 
+[2026-10-29T23:02:19.545Z] #4 [internal] load .dockerignore
+[2026-10-29T23:02:19.545Z] #4 transferring context: 137B done
+[2026-10-29T23:02:19.545Z] #4 DONE 0.0s
+[2026-10-29T23:02:19.545Z] 
+[2026-10-29T23:02:19.545Z] #5 [internal] load build context
+[2026-10-29T23:02:19.545Z] #5 DONE 0.0s
+[2026-10-29T23:02:19.545Z] 
+[2026-10-29T23:02:19.545Z] #6 [stage-1 1/4] FROM docker.io/library/eclipse-temurin:17-jre-alpine@sha256:c4a33e6ddb738fe4be0a28a613ea0940cec42d25d7263c3e2238c43354cb19b0
+[2026-10-29T23:02:19.545Z] #6 resolve docker.io/library/eclipse-temurin:17-jre-alpine@sha256:c4a33e6ddb738fe4be0a28a613ea0940cec42d25d7263c3e2238c43354cb19b0 0.0s done
+[2026-10-29T23:02:19.545Z] #6 DONE 0.0s
+[2026-10-29T23:02:19.545Z] 
+[2026-10-29T23:02:19.545Z] #7 [builder 1/7] FROM docker.io/library/eclipse-temurin:17-jdk-alpine@sha256:5a7fe9fcd65085bbf218a4060f08f1346b8bfd13d9f9942e2db6719cc8a11e22
+[2026-10-29T23:02:19.546Z] #7 resolve docker.io/library/eclipse-temurin:17-jdk-alpine@sha256:5a7fe9fcd65085bbf218a4060f08f1346b8bfd13d9f9942e2db6719cc8a11e22 0.0s done
+[2026-10-29T23:02:19.546Z] #7 DONE 0.0s
+[2026-10-29T23:02:19.546Z] 
+[2026-10-29T23:02:19.546Z] #5 [internal] load build context
+[2026-10-29T23:02:19.546Z] #5 transferring context: 72.55kB 0.0s done
+[2026-10-29T23:02:19.546Z] #5 DONE 0.0s
+[2026-10-29T23:02:19.546Z] 
+[2026-10-29T23:02:19.546Z] #8 [builder 2/7] WORKDIR /workspace
+[2026-10-29T23:02:19.546Z] #8 CACHED
+[2026-10-29T23:02:19.546Z] 
+[2026-10-29T23:02:19.546Z] #9 [builder 3/7] COPY gradlew build.gradle settings.gradle ./
+[2026-10-29T23:02:19.546Z] #9 DONE 0.0s
+[2026-10-29T23:02:19.546Z] 
+[2026-10-29T23:02:19.546Z] #10 [builder 4/7] COPY gradle ./gradle
+[2026-10-29T23:02:19.546Z] #10 DONE 0.0s
+[2026-10-29T23:02:19.797Z] 
+[2026-10-29T23:02:19.797Z] #11 [builder 5/7] RUN chmod +x gradlew
+[2026-10-29T23:02:19.797Z] #11 DONE 0.3s
+[2026-10-29T23:02:20.048Z] 
+[2026-10-29T23:02:20.048Z] #12 [builder 6/7] COPY src ./src
+[2026-10-29T23:02:20.048Z] #12 DONE 0.0s
+[2026-10-29T23:02:20.048Z] 
+[2026-10-29T23:02:20.048Z] #13 [builder 7/7] RUN ./gradlew test bootJar --no-daemon --console=plain
+[2026-10-29T23:02:20.300Z] #13 0.399 Fetching distribution.
+[2026-10-29T23:02:20.551Z] #13 0.400 Downloading https://services.gradle.org/distributions/gradle-9.8.2-bin.zip
+[2026-10-29T23:02:33.076Z] #13 3.401 ..............10%..............20%...............30%..............40%...............50%..............60%...............70%..............80%...............90%..............100%
+[2026-10-29T23:02:35.562Z] #13 15.19 
+[2026-10-29T23:02:35.562Z] #13 15.19 Welcome to Gradle 9.8.2!
+[2026-10-29T23:02:35.562Z] #13 15.19 
+[2026-10-29T23:02:35.562Z] #13 15.20 Here are the highlights of this release:
+[2026-10-29T23:02:35.562Z] #13 15.20  - Java 27 support
+[2026-10-29T23:02:35.562Z] #13 15.20  - Maven mirror settings reuse
+[2026-10-29T23:02:35.562Z] #13 15.20  - Linked problem locations in build output
+[2026-10-29T23:02:35.562Z] #13 15.20 
+[2026-10-29T23:02:35.562Z] #13 15.20 For more details see https://docs.gradle.org/9.8.2/release-notes.html
+[2026-10-29T23:02:35.562Z] #13 15.20 
+[2026-10-29T23:02:35.562Z] #13 15.39 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+[2026-10-29T23:02:37.427Z] #13 17.19 Daemon will be stopped at the end of the build 
+[2026-10-29T23:03:33.489Z] #13 65.29 > Task :compileJava
+[2026-10-29T23:03:33.489Z] #13 65.29 > Task :processResources
+[2026-10-29T23:03:33.489Z] #13 65.29 > Task :classes
+[2026-10-29T23:03:33.489Z] #13 65.29 > Task :resolveMainClassName
+[2026-10-29T23:03:33.489Z] #13 68.69 > Task :bootJar
+[2026-10-29T23:03:33.489Z] #13 72.59 > Task :compileTestJava
+[2026-10-29T23:03:33.489Z] #13 72.59 > Task :processTestResources
+[2026-10-29T23:03:33.489Z] #13 72.59 > Task :testClasses
+[2026-10-29T23:03:45.602Z] #13 85.09 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+[2026-10-29T23:03:46.154Z] #13 86.29 
+[2026-10-29T23:03:46.154Z] #13 86.29 > Task :test
+[2026-10-29T23:03:46.407Z] #13 86.29 
+[2026-10-29T23:03:46.407Z] #13 86.29 StudentApiTests > duplicateEmailReturns409() PASSED
+[2026-10-29T23:03:46.407Z] #13 86.39 
+[2026-10-29T23:03:46.407Z] #13 86.39 StudentApiTests > missingStudentReturns404() PASSED
+[2026-10-29T23:03:46.658Z] #13 86.79 
+[2026-10-29T23:03:46.658Z] #13 86.79 StudentApiTests > blankNameReturns400() PASSED
+[2026-10-29T23:03:46.910Z] #13 86.89 
+[2026-10-29T23:03:46.910Z] #13 86.89 StudentApiTests > updatesStudent() PASSED
+[2026-10-29T23:03:46.910Z] #13 86.90 
+[2026-10-29T23:03:46.910Z] #13 86.90 StudentApiTests > createsStudent() PASSED
+[2026-10-29T23:03:46.910Z] #13 86.99 
+[2026-10-29T23:03:47.163Z] #13 86.99 StudentApiTests > deleteMissingStudentReturns404() PASSED
+[2026-10-29T23:03:47.163Z] #13 86.99 
+[2026-10-29T23:03:47.163Z] #13 86.99 StudentApiTests > retrievesStudentById() PASSED
+[2026-10-29T23:03:47.163Z] #13 86.99 
+[2026-10-29T23:03:47.163Z] #13 86.99 StudentApiTests > invalidEmailReturns400() PASSED
+[2026-10-29T23:03:47.163Z] #13 87.09 
+[2026-10-29T23:03:47.163Z] #13 87.09 StudentApiTests > deletesStudent() PASSED
+[2026-10-29T23:03:47.163Z] #13 87.09 
+[2026-10-29T23:03:47.163Z] #13 87.09 StudentApiTests > postDoesNotOverwriteClientSuppliedId() PASSED
+[2026-10-29T23:03:47.163Z] #13 87.09 
+[2026-10-29T23:03:47.163Z] #13 87.09 StudentApiTests > displaysStudentIdentity() PASSED
+[2026-10-29T23:03:47.163Z] #13 87.09 
+[2026-10-29T23:03:47.163Z] #13 87.09 StudentApiTests > invalidUpdateDoesNotChangeRecord() PASSED
+[2026-10-29T23:03:47.163Z] #13 87.19 
+[2026-10-29T23:03:47.163Z] #13 87.19 StudentApiTests > updateMissingStudentReturns404() PASSED
+[2026-10-29T23:03:47.163Z] #13 87.19 
+[2026-10-29T23:03:47.163Z] #13 87.19 StudentApiTests > exposesPersonalizedVersion() PASSED
+[2026-10-29T23:03:47.163Z] #13 87.19 
+[2026-10-29T23:03:47.163Z] #13 87.19 StudentApiTests > listsStudents() PASSED
+[2026-10-29T23:03:48.078Z] #13 88.09 
+[2026-10-29T23:03:48.078Z] #13 88.09 ZholdasZhannuraStudentApiApplicationTests > contextLoads() PASSED
+[2026-10-29T23:03:48.078Z] #13 88.09 
+[2026-10-29T23:03:48.078Z] #13 88.09 2026-10-29T23:03:47.802Z  INFO 199 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-10-29T23:03:48.078Z] #13 88.09 2026-10-29T23:03:47.807Z  INFO 199 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+[2026-10-29T23:03:48.078Z] #13 88.09 2026-10-29T23:03:47.812Z  INFO 199 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+[2026-10-29T23:03:48.078Z] #13 88.09 2026-10-29T23:03:47.817Z  INFO 199 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+[2026-10-29T23:03:48.078Z] #13 88.09 2026-10-29T23:03:47.818Z  INFO 199 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+[2026-10-29T23:03:48.078Z] #13 88.09 2026-10-29T23:03:47.821Z  INFO 199 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+[2026-10-29T23:03:48.078Z] #13 88.29 
+[2026-10-29T23:03:48.329Z] #13 88.29 BUILD SUCCESSFUL in 1m 27s
+[2026-10-29T23:03:48.329Z] #13 88.29 7 actionable tasks: 7 executed
+[2026-10-29T23:03:48.329Z] #13 88.29 Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.2/userguide/configuration_cache_enabling.html
+[2026-10-29T23:03:48.580Z] #13 DONE 88.7s
+[2026-10-29T23:03:48.840Z] 
+[2026-10-29T23:03:48.840Z] #14 [stage-1 2/4] WORKDIR /app
+[2026-10-29T23:03:48.841Z] #14 CACHED
+[2026-10-29T23:03:48.841Z] 
+[2026-10-29T23:03:48.841Z] #15 [stage-1 3/4] RUN addgroup -S student && adduser -S student -G student
+[2026-10-29T23:03:48.841Z] #15 CACHED
+[2026-10-29T23:03:48.841Z] 
+[2026-10-29T23:03:48.841Z] #16 [stage-1 4/4] COPY --from=builder --chown=student:student /workspace/build/libs/student-api.jar app.jar
+[2026-10-29T23:03:48.841Z] #16 DONE 0.2s
+[2026-10-29T23:03:49.097Z] 
+[2026-10-29T23:03:49.097Z] #17 exporting to image
+[2026-10-29T23:03:49.097Z] #17 exporting layers
+[2026-10-29T23:03:52.338Z] #17 exporting layers 3.5s done
+[2026-10-29T23:03:52.589Z] #17 exporting manifest sha256:5c7925237079cb327240eeb3e37e198b9e526678f46199a9666b35e60f55419d 0.0s done
+[2026-10-29T23:03:52.589Z] #17 exporting config sha256:a6f95a01214555e381eb4ee5fc536c206a7a972d79ed903733cb932dc3d7af27 0.1s done
+[2026-10-29T23:03:52.589Z] #17 exporting attestation manifest sha256:b8881d6c541a04ea712352b0f5dae8dd288b0d9be70973542d24d6bdcba7e579 0.0s done
+[2026-10-29T23:03:52.589Z] #17 exporting manifest list sha256:4e4574a0628e3d566d588d53095af7ffade852aeb9e2b815d83ca5f18ee5f897 0.0s done
+[2026-10-29T23:03:52.589Z] #17 naming to docker.io/library/zholdas-zhannura-student-api:v1.1-zholdas-zhannura done
+[2026-10-29T23:03:52.589Z] #17 unpacking to docker.io/library/zholdas-zhannura-student-api:v1.1-zholdas-zhannura
+[2026-10-29T23:03:52.842Z] #17 unpacking to docker.io/library/zholdas-zhannura-student-api:v1.1-zholdas-zhannura 0.4s done
+[2026-10-29T23:03:53.093Z] #17 DONE 4.1s
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Verify)
+[Pipeline] sh
+[2026-10-29T23:03:53.523Z] + docker image inspect zholdas-zhannura-student-api:v1.1-zholdas-zhannura --format Image={{.Id}} Size={{.Size}} Created={{.Created}}
+[2026-10-29T23:03:53.523Z] Image=sha256:4e4574a0628e3d566d588d53095af7ffade852aeb9e2b815d83ca5f18ee5f897 Size=115698326 Created=2026-10-29T23:03:48.665167164Z
+[2026-10-29T23:03:53.523Z] + git rev-parse HEAD
+[2026-10-29T23:03:53.523Z] + docker image inspect --format {{ index .Config.Labels "org.opencontainers.image.revision" }} zholdas-zhannura-student-api:v1.1-zholdas-zhannura
+[2026-10-29T23:03:53.523Z] + test c469d690f49db2a11dc3b0e51c9843eece160684 = c469d690f49db2a11dc3b0e51c9843eece160684
+[2026-10-29T23:03:53.523Z] + echo Image verified for Zhannura Zholdas: zholdas-zhannura-student-api:v1.1-zholdas-zhannura
+[2026-10-29T23:03:53.523Z] Image verified for Zhannura Zholdas: zholdas-zhannura-student-api:v1.1-zholdas-zhannura
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] archiveArtifacts
+[2026-10-29T23:03:53.991Z] Archiving artifacts
+[2026-10-29T23:03:54.296Z] Recording fingerprints
+[Pipeline] echo
+[2026-10-29T23:03:54.539Z] Verified CI build completed for Zhannura Zholdas. Deployment is a separate authorized operation.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // timeout
+[Pipeline] }
+[Pipeline] // timestamps
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

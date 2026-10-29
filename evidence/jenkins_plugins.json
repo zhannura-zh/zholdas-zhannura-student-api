@@ -278,6 +278,11 @@
     },
     {
       "active": true,
+      "shortName": "pipeline-graph-analysis",
+      "version": "231.v56354571a_da_0"
+    },
+    {
+      "active": true,
       "shortName": "pipeline-graph-view",
       "version": "1053.v9df19e6ceed2"
     },
@@ -313,6 +318,11 @@
     },
     {
       "active": true,
+      "shortName": "pipeline-rest-api",
+      "version": "2.41"
+    },
+    {
+      "active": true,
       "shortName": "pipeline-stage-step",
       "version": "345.va_96187909426"
     },
@@ -320,6 +330,11 @@
       "active": true,
       "shortName": "pipeline-stage-tags-metadata",
       "version": "2.2293.v6e7193cec599"
+    },
+    {
+      "active": true,
+      "shortName": "pipeline-stage-view",
+      "version": "2.41"
     },
     {
       "active": true,

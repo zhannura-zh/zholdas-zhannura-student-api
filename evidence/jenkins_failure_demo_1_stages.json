@@ -1,0 +1,113 @@
+{
+  "_links": {
+    "self": {
+      "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/1/wfapi/describe"
+    }
+  },
+  "id": "1",
+  "name": "#1",
+  "status": "FAILED",
+  "startTimeMillis": 1793314992884,
+  "endTimeMillis": 1793315045945,
+  "durationMillis": 53061,
+  "queueDurationMillis": 11,
+  "pauseDurationMillis": 0,
+  "stages": [
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/1/execution/node/12/wfapi/describe"
+        }
+      },
+      "id": "12",
+      "name": "Checkout",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793314995605,
+      "durationMillis": 1938,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/1/execution/node/19/wfapi/describe"
+        }
+      },
+      "id": "19",
+      "name": "Build",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793314997586,
+      "durationMillis": 17252,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/1/execution/node/24/wfapi/describe"
+        }
+      },
+      "id": "24",
+      "name": "Test",
+      "execNode": "",
+      "status": "FAILED",
+      "error": {
+        "message": "script returned exit code 1",
+        "type": "hudson.AbortException"
+      },
+      "startTimeMillis": 1793315014881,
+      "durationMillis": 29899,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/1/execution/node/30/wfapi/describe"
+        }
+      },
+      "id": "30",
+      "name": "Docker Build",
+      "execNode": "",
+      "status": "FAILED",
+      "error": {
+        "message": "script returned exit code 1",
+        "type": "hudson.AbortException"
+      },
+      "startTimeMillis": 1793315044827,
+      "durationMillis": 183,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/1/execution/node/35/wfapi/describe"
+        }
+      },
+      "id": "35",
+      "name": "Verify",
+      "execNode": "",
+      "status": "FAILED",
+      "error": {
+        "message": "script returned exit code 1",
+        "type": "hudson.AbortException"
+      },
+      "startTimeMillis": 1793315045072,
+      "durationMillis": 143,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/1/execution/node/40/wfapi/describe"
+        }
+      },
+      "id": "40",
+      "name": "Declarative: Post Actions",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793315045296,
+      "durationMillis": 164,
+      "pauseDurationMillis": 0
+    }
+  ]
+}

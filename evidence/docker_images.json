@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "sha256:3b413f5ff9ad399b217048c84848ba138328916742c1fab85a431da9a8bdb90c",
+    "RepoTags": [
+      "zholdas-zhannura-student-api:v1.0-zholdas-zhannura"
+    ],
+    "Created": "2026-10-29T21:21:53.639395475Z",
+    "Size": 114370435,
+    "Architecture": "amd64"
+  },
+  {
+    "Id": "sha256:193a75b700e085599363b2fdd518eba9d20624f9239b0a293277f4c17070fc69",
+    "RepoTags": [
+      "zholdas-zhannura-student-api:v1.1-zholdas-zhannura"
+    ],
+    "Created": "2026-10-29T22:55:51.24962482Z",
+    "Size": 115698292,
+    "Architecture": "amd64"
+  }
+]

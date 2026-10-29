@@ -1,0 +1,20 @@
+{
+  "student_id": 3,
+  "expected_record": {
+    "name": "Zhannura Zholdas Updated",
+    "email": "zhannura.midterm.1793314901@example.test",
+    "id": 3
+  },
+  "volume_before": [
+    "zholdas_postgres_data"
+  ],
+  "volume_after": [
+    "zholdas_postgres_data"
+  ],
+  "services_stopped": [
+    "student-api",
+    "postgres-db"
+  ],
+  "record_persisted": true,
+  "volume_removed": false
+}

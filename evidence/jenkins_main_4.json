@@ -1,0 +1,307 @@
+{
+  "_class": "org.jenkinsci.plugins.workflow.job.WorkflowRun",
+  "actions": [
+    {
+      "_class": "hudson.model.CauseAction",
+      "causes": [
+        {
+          "_class": "hudson.model.Cause$UserIdCause",
+          "shortDescription": "Started by user \u0416\u0430\u043d\u043d\u0443\u0440\u0430 \u0416\u043e\u043b\u0434\u0430\u0441",
+          "userId": "zhannura_zh",
+          "userName": "\u0416\u0430\u043d\u043d\u0443\u0440\u0430 \u0416\u043e\u043b\u0434\u0430\u0441"
+        },
+        {
+          "_class": "hudson.triggers.SCMTrigger$SCMTriggerCause",
+          "shortDescription": "Started by an SCM change"
+        }
+      ]
+    },
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.workflow.libs.LibrariesAction"
+    },
+    {},
+    {
+      "_class": "hudson.plugins.git.util.BuildData",
+      "buildsByBranchName": {
+        "refs/remotes/origin/main": {
+          "_class": "hudson.plugins.git.util.Build",
+          "buildNumber": 4,
+          "buildResult": null,
+          "marked": {
+            "SHA1": "c469d690f49db2a11dc3b0e51c9843eece160684",
+            "branch": [
+              {
+                "SHA1": "c469d690f49db2a11dc3b0e51c9843eece160684",
+                "name": "refs/remotes/origin/main"
+              }
+            ]
+          },
+          "revision": {
+            "SHA1": "c469d690f49db2a11dc3b0e51c9843eece160684",
+            "branch": [
+              {
+                "SHA1": "c469d690f49db2a11dc3b0e51c9843eece160684",
+                "name": "refs/remotes/origin/main"
+              }
+            ]
+          }
+        }
+      },
+      "lastBuiltRevision": {
+        "SHA1": "c469d690f49db2a11dc3b0e51c9843eece160684",
+        "branch": [
+          {
+            "SHA1": "c469d690f49db2a11dc3b0e51c9843eece160684",
+            "name": "refs/remotes/origin/main"
+          }
+        ]
+      },
+      "remoteUrls": [
+        "https://github.com/zhannura-zh/zholdas-zhannura-student-api.git"
+      ],
+      "scmName": ""
+    },
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.workflow.cps.EnvActionImpl"
+    },
+    {
+      "_class": "hudson.tasks.junit.TestResultAction",
+      "failCount": 0,
+      "skipCount": 0,
+      "totalCount": 16,
+      "urlName": "testReport"
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.displayurlapi.actions.RunDisplayAction"
+    },
+    {
+      "_class": "org.jenkinsci.plugins.pipeline.modeldefinition.actions.RestartDeclarativePipelineAction"
+    },
+    {},
+    {
+      "_class": "org.jenkinsci.plugins.workflow.job.views.FlowGraphAction"
+    },
+    {},
+    {}
+  ],
+  "artifacts": [
+    {
+      "displayPath": "student-api.jar",
+      "fileName": "student-api.jar",
+      "relativePath": "build/libs/student-api.jar"
+    }
+  ],
+  "building": false,
+  "description": null,
+  "displayName": "#4",
+  "duration": 171989,
+  "estimatedDuration": 171989,
+  "executor": null,
+  "fullDisplayName": "Zholdas_Zhannura_Student_API #4",
+  "id": "4",
+  "keepLog": false,
+  "number": 4,
+  "queueId": 7,
+  "result": "SUCCESS",
+  "timestamp": 1793314862869,
+  "url": "http://localhost:8088/job/Zholdas_Zhannura_Student_API/4/",
+  "changeSets": [
+    {
+      "_class": "hudson.plugins.git.GitChangeSetList",
+      "items": [
+        {
+          "_class": "hudson.plugins.git.GitChangeSet",
+          "affectedPaths": [
+            "src/main/resources/application.properties",
+            "src/test/java/com/iitu/zholdas_zhannura_student_api/StudentApiTests.java",
+            "src/main/java/com/iitu/zholdas_zhannura_student_api/StudentController.java",
+            "build.gradle",
+            "src/main/java/com/iitu/zholdas_zhannura_student_api/ApiExceptionHandler.java",
+            "src/test/resources/application.properties",
+            "src/main/java/com/iitu/zholdas_zhannura_student_api/Student.java",
+            "README.md"
+          ],
+          "commitId": "81f6ce1bfdf08e26370b0511662506d363652417",
+          "timestamp": 1793314497000,
+          "author": {
+            "absoluteUrl": "http://localhost:8088/user/zholdaszhannura",
+            "fullName": "zholdaszhannura"
+          },
+          "authorEmail": "zholdaszhannura@gmail.com",
+          "comment": "feat: validate Student CRUD and add 16 tests for Zhannura Zholdas\n",
+          "date": "2026-10-30 03:54:57 +0500",
+          "id": "81f6ce1bfdf08e26370b0511662506d363652417",
+          "msg": "feat: validate Student CRUD and add 16 tests for Zhannura Zholdas",
+          "paths": [
+            {
+              "editType": "add",
+              "file": "src/main/java/com/iitu/zholdas_zhannura_student_api/ApiExceptionHandler.java"
+            },
+            {
+              "editType": "add",
+              "file": "src/test/resources/application.properties"
+            },
+            {
+              "editType": "add",
+              "file": "src/test/java/com/iitu/zholdas_zhannura_student_api/StudentApiTests.java"
+            },
+            {
+              "editType": "edit",
+              "file": "README.md"
+            },
+            {
+              "editType": "edit",
+              "file": "build.gradle"
+            },
+            {
+              "editType": "edit",
+              "file": "src/main/java/com/iitu/zholdas_zhannura_student_api/Student.java"
+            },
+            {
+              "editType": "edit",
+              "file": "src/main/java/com/iitu/zholdas_zhannura_student_api/StudentController.java"
+            },
+            {
+              "editType": "edit",
+              "file": "src/main/resources/application.properties"
+            }
+          ]
+        },
+        {
+          "_class": "hudson.plugins.git.GitChangeSet",
+          "affectedPaths": [
+            "backups/README_Zholdas_Zhannura.md",
+            "evidence/jenkins_plugins.json",
+            "gradlew",
+            ".env.example",
+            "evidence/TEST-com.iitu.zholdas_zhannura_student_api.StudentApiTests.xml",
+            "scripts/Zholdas_Zhannura_system_report.sh",
+            ".gitignore",
+            ".dockerignore",
+            ".gitattributes",
+            "evidence/linux_administration.txt",
+            "infra/jenkins/Dockerfile",
+            "evidence/jenkins_job_config.xml",
+            "README.md",
+            "Jenkinsfile",
+            "Dockerfile",
+            "docker-compose.yml",
+            "infra/jenkins/compose.yml",
+            "logs/Zholdas_Zhannura_system_report.log",
+            "evidence/TEST-com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplicationTests.xml"
+          ],
+          "commitId": "1da669fd72981aae3f06487c9c7eb0b45fdc60ee",
+          "timestamp": 1793314814000,
+          "author": {
+            "absoluteUrl": "http://localhost:8088/user/zholdaszhannura",
+            "fullName": "zholdaszhannura"
+          },
+          "authorEmail": "zholdaszhannura@gmail.com",
+          "comment": "ci: complete Docker Linux and five-stage Jenkins checks for Zhannura Zholdas\n",
+          "date": "2026-10-30 04:00:14 +0500",
+          "id": "1da669fd72981aae3f06487c9c7eb0b45fdc60ee",
+          "msg": "ci: complete Docker Linux and five-stage Jenkins checks for Zhannura Zholdas",
+          "paths": [
+            {
+              "editType": "add",
+              "file": "infra/jenkins/compose.yml"
+            },
+            {
+              "editType": "edit",
+              "file": "backups/README_Zholdas_Zhannura.md"
+            },
+            {
+              "editType": "edit",
+              "file": "Dockerfile"
+            },
+            {
+              "editType": "add",
+              "file": "evidence/jenkins_plugins.json"
+            },
+            {
+              "editType": "edit",
+              "file": "gradlew"
+            },
+            {
+              "editType": "add",
+              "file": ".env.example"
+            },
+            {
+              "editType": "add",
+              "file": "evidence/jenkins_job_config.xml"
+            },
+            {
+              "editType": "edit",
+              "file": "scripts/Zholdas_Zhannura_system_report.sh"
+            },
+            {
+              "editType": "edit",
+              "file": ".gitattributes"
+            },
+            {
+              "editType": "edit",
+              "file": ".gitignore"
+            },
+            {
+              "editType": "edit",
+              "file": "docker-compose.yml"
+            },
+            {
+              "editType": "add",
+              "file": "infra/jenkins/Dockerfile"
+            },
+            {
+              "editType": "edit",
+              "file": "Jenkinsfile"
+            },
+            {
+              "editType": "edit",
+              "file": "README.md"
+            },
+            {
+              "editType": "add",
+              "file": "evidence/linux_administration.txt"
+            },
+            {
+              "editType": "add",
+              "file": "evidence/TEST-com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplicationTests.xml"
+            },
+            {
+              "editType": "edit",
+              "file": "logs/Zholdas_Zhannura_system_report.log"
+            },
+            {
+              "editType": "add",
+              "file": ".dockerignore"
+            },
+            {
+              "editType": "add",
+              "file": "evidence/TEST-com.iitu.zholdas_zhannura_student_api.StudentApiTests.xml"
+            }
+          ]
+        }
+      ],
+      "kind": "git"
+    }
+  ],
+  "culprits": [
+    {
+      "absoluteUrl": "http://localhost:8088/user/zholdaszhannura",
+      "fullName": "zholdaszhannura"
+    }
+  ],
+  "inProgress": false,
+  "nextBuild": null,
+  "previousBuild": {
+    "number": 3,
+    "url": "http://localhost:8088/job/Zholdas_Zhannura_Student_API/3/"
+  }
+}

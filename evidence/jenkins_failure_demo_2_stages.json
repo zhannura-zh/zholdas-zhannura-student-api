@@ -1,0 +1,107 @@
+{
+  "_links": {
+    "self": {
+      "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/wfapi/describe"
+    },
+    "changesets": {
+      "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/wfapi/changesets"
+    },
+    "artifacts": {
+      "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/wfapi/artifacts"
+    }
+  },
+  "id": "2",
+  "name": "#2",
+  "status": "SUCCESS",
+  "startTimeMillis": 1793315146707,
+  "endTimeMillis": 1793315205506,
+  "durationMillis": 58799,
+  "queueDurationMillis": 19,
+  "pauseDurationMillis": 0,
+  "stages": [
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/execution/node/12/wfapi/describe"
+        }
+      },
+      "id": "12",
+      "name": "Checkout",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793315153911,
+      "durationMillis": 1941,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/execution/node/19/wfapi/describe"
+        }
+      },
+      "id": "19",
+      "name": "Build",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793315155914,
+      "durationMillis": 16131,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/execution/node/24/wfapi/describe"
+        }
+      },
+      "id": "24",
+      "name": "Test",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793315172109,
+      "durationMillis": 29094,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/execution/node/30/wfapi/describe"
+        }
+      },
+      "id": "30",
+      "name": "Docker Build",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793315201257,
+      "durationMillis": 2880,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/execution/node/35/wfapi/describe"
+        }
+      },
+      "id": "35",
+      "name": "Verify",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793315204189,
+      "durationMillis": 431,
+      "pauseDurationMillis": 0
+    },
+    {
+      "_links": {
+        "self": {
+          "href": "/job/Zholdas_Zhannura_Student_API_Failure_Demo/2/execution/node/40/wfapi/describe"
+        }
+      },
+      "id": "40",
+      "name": "Declarative: Post Actions",
+      "execNode": "",
+      "status": "SUCCESS",
+      "startTimeMillis": 1793315204691,
+      "durationMillis": 400,
+      "pauseDurationMillis": 0
+    }
+  ]
+}
