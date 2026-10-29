@@ -19,9 +19,9 @@ pipeline {
         stage('Build & Test') {
             steps {
                 echo "=== Stage 2: Build & Test ==="
-                echo "Building application via Gradle..."
+                echo "Compiling and assembling application via Gradle..."
                 sh 'chmod +x ./gradlew'
-                sh './gradlew assemble --no-daemon'
+                sh './gradlew assemble -x test --no-daemon'
             }
         }
 
