@@ -1,1 +1,1 @@
-Main version by Zholdas Zhannura (Main Branch)
+# Student API Project - Maintained and Documented by Zholdas Zhannura
