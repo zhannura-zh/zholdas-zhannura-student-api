@@ -1,0 +1,44 @@
+name: zholdas-zhannura-student-api
+
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: zholdas-postgres-db
+    environment:
+      POSTGRES_DB: student_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - student-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  student-api:
+    image: zholdas-zhannura-student-api:v1.0-zholdas-zhannura
+    container_name: zholdas-student-api
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://postgres-db:5432/student_db
+      DB_USER: postgres
+      DB_PASSWORD: postgrespassword
+    ports:
+      - "8080:8080"
+    networks:
+      - student-network
+
+volumes:
+  postgres_data:
+    name: zholdas_postgres_data
+
+networks:
+  student-network:
+    name: zholdas_student_network
