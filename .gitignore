@@ -35,3 +35,12 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Local credentials and runtime state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+jenkins-auth
+.midterm-api-token

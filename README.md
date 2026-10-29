@@ -16,8 +16,8 @@ Do not commit the real `.env` or print `docker compose config` with live secrets
 docker compose build
 docker compose up -d
 docker compose ps
-curl http://localhost:8080/api/students/info
-curl http://localhost:8080/api/students/version
+curl http://localhost:18080/api/students/info
+curl http://localhost:18080/api/students/version
 ```
 
 On Windows use `curl.exe` when PowerShell aliases `curl` to Invoke-WebRequest.
@@ -124,3 +124,5 @@ The `evidence/` directory contains actual command outputs and verification resul
 The assessment report records the final source revision and Jenkins build numbers.
 Never include `.env`, Jenkins authentication files or private database backups in
 submission archives.
+
+This Windows host already runs Apache on port 8080. The local .env maps the API to 127.0.0.1:18080; the container still listens on 8080.

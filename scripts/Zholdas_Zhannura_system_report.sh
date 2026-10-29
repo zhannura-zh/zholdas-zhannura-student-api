@@ -1,24 +1,21 @@
-#!/bin/sh
-
-LOG_FILE="logs/Zholdas_Zhannura_system_report.log"
-
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+mkdir -p "$ROOT/logs"
+LOG_FILE="$ROOT/logs/Zholdas_Zhannura_system_report.log"
 {
-  echo "=========================================="
-  echo "System Monitoring Report"
-  echo "Student Full Name: Zholdas Zhannura"
-  echo "Date and Time    : $(date '+%Y-%m-%d %H:%M:%S')"
-  echo "Current Username : $(whoami)"
-  echo "OS & Kernel      : $(uname -s -r -v)"
-  echo "------------------------------------------"
-  echo "CPU Information:"
-  cat /proc/cpuinfo | grep "model name" | head -n 1
-  echo "------------------------------------------"
-  echo "Memory Information:"
-  free -h 2>/dev/null || free -m
-  echo "------------------------------------------"
-  echo "Disk Usage:"
-  df -h /
-  echo "------------------------------------------"
-  echo "Available Disk Space: $(df -h / | awk 'NR==2 {print $4}')"
-  echo "=========================================="
+    echo 'System Monitoring Report'
+    echo 'Student Full Name: Zholdas Zhannura'
+    printf 'Date and Time: '; date --iso-8601=seconds
+    printf 'Current Username: '; whoami
+    printf 'OS and Kernel: '; uname -a
+    if [[ -r /etc/os-release ]]; then cat /etc/os-release; fi
+    echo 'CPU Information:'
+    awk -F ': ' '/model name/ { print $2; exit }' /proc/cpuinfo
+    echo 'Memory Information:'
+    free -h
+    echo 'Disk Usage:'
+    df -h "$ROOT"
+    printf 'Available Disk Space: '
+    df -h "$ROOT" | awk 'NR == 2 { print $4 }'
 } | tee "$LOG_FILE"

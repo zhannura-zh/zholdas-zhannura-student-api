@@ -1,0 +1,17 @@
+name: zholdas-midterm-jenkins
+services:
+  jenkins:
+    build: .
+    image: zholdas-zhannura-jenkins:2.580.2-docker29
+    container_name: zholdas-jenkins
+    group_add:
+      - "${DOCKER_SOCKET_GID:-0}"
+    ports:
+      - "127.0.0.1:8088:8080"
+      - "127.0.0.1:50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+volumes:
+  jenkins_home:
+    external: true

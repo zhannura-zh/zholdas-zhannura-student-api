@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.iitu.zholdas_zhannura_student_api.StudentApiTests" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-10-29T22:52:46.001Z" hostname="HOME-PC" time="9.849">
+  <properties/>
+  <testcase name="duplicateEmailReturns409()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="1.591"/>
+  <testcase name="missingStudentReturns404()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.038"/>
+  <testcase name="blankNameReturns400()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.509"/>
+  <testcase name="updatesStudent()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.066"/>
+  <testcase name="createsStudent()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.03"/>
+  <testcase name="deleteMissingStudentReturns404()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.083"/>
+  <testcase name="retrievesStudentById()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.013"/>
+  <testcase name="invalidEmailReturns400()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.019"/>
+  <testcase name="deletesStudent()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.025"/>
+  <testcase name="postDoesNotOverwriteClientSuppliedId()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.02"/>
+  <testcase name="displaysStudentIdentity()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.021"/>
+  <testcase name="invalidUpdateDoesNotChangeRecord()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.022"/>
+  <testcase name="updateMissingStudentReturns404()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.013"/>
+  <testcase name="exposesPersonalizedVersion()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.009"/>
+  <testcase name="listsStudents()" classname="com.iitu.zholdas_zhannura_student_api.StudentApiTests" time="0.025"/>
+  <system-out><![CDATA[03:52:46.349 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.iitu.zholdas_zhannura_student_api.StudentApiTests]: StudentApiTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:52:46.632 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplication for test class com.iitu.zholdas_zhannura_student_api.StudentApiTests
+03:52:46.852 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.iitu.zholdas_zhannura_student_api.StudentApiTests]: StudentApiTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:52:46.857 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplication for test class com.iitu.zholdas_zhannura_student_api.StudentApiTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-30T03:52:47.424+05:00  INFO 19936 --- [    Test worker] c.i.z.StudentApiTests                    : Starting StudentApiTests using Java 17.0.18 with PID 19936 (started by Zhannur in C:\Users\Akerke\OneDrive - Satbayev University\Рабочий стол\zholdas-zhannura-student-api)
+2026-10-30T03:52:47.426+05:00  INFO 19936 --- [    Test worker] c.i.z.StudentApiTests                    : No active profile set, falling back to 1 default profile: "default"
+2026-10-30T03:52:48.311+05:00  INFO 19936 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-30T03:52:48.438+05:00  INFO 19936 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 1 JPA repository interface.
+2026-10-30T03:52:49.201+05:00  INFO 19936 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-30T03:52:49.316+05:00  INFO 19936 --- [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-10-30T03:52:50.059+05:00  INFO 19936 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-30T03:52:50.120+05:00  INFO 19936 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-30T03:52:50.484+05:00  INFO 19936 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:student_api_test user=SA
+2026-10-30T03:52:50.484+05:00  INFO 19936 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-30T03:52:50.638+05:00  INFO 19936 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:student_api_test]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: STUDENT_API_TEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-30T03:52:52.127+05:00  INFO 19936 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-30T03:52:52.190+05:00  INFO 19936 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-30T03:52:52.337+05:00  INFO 19936 --- [    Test worker] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-30T03:52:52.583+05:00  WARN 19936 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-30T03:52:53.247+05:00  INFO 19936 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-10-30T03:52:53.247+05:00  INFO 19936 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-10-30T03:52:53.256+05:00  INFO 19936 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 8 ms
+2026-10-30T03:52:53.321+05:00  INFO 19936 --- [    Test worker] c.i.z.StudentApiTests                    : Started StudentApiTests in 6.335 seconds (process running for 8.968)
+2026-10-30T03:52:54.725+05:00  WARN 19936 --- [    Test worker] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 23505, SQLState: 23505
+2026-10-30T03:52:54.725+05:00  WARN 19936 --- [    Test worker] org.hibernate.orm.jdbc.error             : Нарушение уникального индекса или первичного ключа: "PUBLIC.CONSTRAINT_9 INDEX PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.STUDENTS(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'unique@example.test' )"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_9 INDEX PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.STUDENTS(EMAIL NULLS FIRST) VALUES ( /* 1 */ 'unique@example.test' )"; SQL statement:
+insert into students (email,name,id) values (?,?,default) [23505-240]
+2026-10-30T03:52:55.003+05:00  WARN 19936 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.iitu.zholdas_zhannura_student_api.Student> com.iitu.zholdas_zhannura_student_api.StudentController.createStudent(com.iitu.zholdas_zhannura_student_api.Student): [Field error in object 'student' on field 'name': rejected value [ ]; codes [NotBlank.student.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.name,name]; arguments []; default message [name]]; default message [must not be blank]] ]
+2026-10-30T03:52:55.702+05:00  WARN 19936 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.iitu.zholdas_zhannura_student_api.Student> com.iitu.zholdas_zhannura_student_api.StudentController.createStudent(com.iitu.zholdas_zhannura_student_api.Student): [Field error in object 'student' on field 'email': rejected value [invalid]; codes [Email.student.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@4c12e25d,.*]; default message [must be a well-formed email address]] ]
+2026-10-30T03:52:55.793+05:00  WARN 19936 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<com.iitu.zholdas_zhannura_student_api.Student> com.iitu.zholdas_zhannura_student_api.StudentController.updateStudent(java.lang.Long,com.iitu.zholdas_zhannura_student_api.Student) with 2 errors: [Field error in object 'student' on field 'email': rejected value [invalid]; codes [Email.student.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@4c12e25d,.*]; default message [must be a well-formed email address]] [Field error in object 'student' on field 'name': rejected value []; codes [NotBlank.student.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.name,name]; arguments []; default message [name]]; default message [must not be blank]] ]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

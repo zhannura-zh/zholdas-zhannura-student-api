@@ -1,57 +1,53 @@
 pipeline {
-    agent any
-
-    environment {
-        STUDENT_NAME = "Zholdas Zhannura"
-        PROJECT_NAME = "zholdas-zhannura-student-api"
-        DOCKER_IMAGE = "zholdas-zhannura-student-api:v1.0-zholdas-zhannura"
+    agent { label 'zholdas-docker' }
+    options {
+        skipDefaultCheckout(true)
+        disableConcurrentBuilds()
+        timestamps()
+        timeout(time: 20, unit: 'MINUTES')
     }
-
+    triggers { pollSCM('H/2 * * * *') }
+    environment {
+        STUDENT_NAME = 'Zhannura Zholdas'
+        STUDENT_GROUP = 'IT2-2306'
+        STUDENT_ID = '37742'
+        DOCKER_IMAGE = 'zholdas-zhannura-student-api:v1.1-zholdas-zhannura'
+    }
     stages {
         stage('Checkout') {
             steps {
-                echo "=== Stage 1: Checkout ==="
-                echo "Checking out repository for ${env.STUDENT_NAME}"
                 checkout scm
+                echo "Student: ${env.STUDENT_NAME}; Group: ${env.STUDENT_GROUP}; Student ID: ${env.STUDENT_ID}"
+                sh 'git rev-parse HEAD && java -version && docker version'
             }
         }
-
-        stage('Build & Test') {
-            steps {
-                echo "=== Stage 2: Build & Test ==="
-                echo "Compiling and assembling application via Gradle..."
-                sh 'chmod +x ./gradlew'
-                sh './gradlew assemble -x test --no-daemon'
-            }
+        stage('Build') {
+            steps { sh './gradlew clean assemble --no-daemon --console=plain' }
         }
-
+        stage('Test') {
+            steps { sh './gradlew test --no-daemon --console=plain' }
+            post { always { junit 'build/test-results/test/TEST-*.xml' } }
+        }
         stage('Docker Build') {
             steps {
-                echo "=== Stage 3: Docker Build ==="
-                echo "Building Docker Image: ${env.DOCKER_IMAGE}"
-                sh "docker build -t ${env.DOCKER_IMAGE} . || true"
-                echo "Docker Image verification: ${env.DOCKER_IMAGE} configured for ${env.STUDENT_NAME}"
+                sh '''docker build --label org.opencontainers.image.revision=$(git rev-parse HEAD) \
+                    --label org.opencontainers.image.authors="Zhannura Zholdas" \
+                    -t "$DOCKER_IMAGE" .'''
             }
         }
-
-        stage('Post-Build Notification') {
+        stage('Verify') {
             steps {
-                echo "=== Stage 4: Notification ==="
-                echo "SUCCESS: Pipeline completed successfully for ${env.STUDENT_NAME}!"
-                echo "Artifacts and Docker image ${env.DOCKER_IMAGE} are ready."
+                sh '''docker image inspect "$DOCKER_IMAGE" --format 'Image={{.Id}} Size={{.Size}} Created={{.Created}}'
+test "$(git rev-parse HEAD)" = "$(docker image inspect --format '{{ index .Config.Labels "org.opencontainers.image.revision" }}' "$DOCKER_IMAGE")"
+echo "Image verified for $STUDENT_NAME: $DOCKER_IMAGE"'''
             }
         }
     }
-
     post {
-        always {
-            echo "Pipeline execution finished for ${env.STUDENT_NAME}."
-        }
         success {
-            echo "Build Status: SUCCESS"
+            archiveArtifacts artifacts: 'build/libs/student-api.jar', fingerprint: true
+            echo "Verified CI build completed for ${env.STUDENT_NAME}. Deployment is a separate authorized operation."
         }
-        failure {
-            echo "Build Status: FAILURE"
-        }
+        failure { echo 'Build failed. Later normal stages are not executed.' }
     }
 }

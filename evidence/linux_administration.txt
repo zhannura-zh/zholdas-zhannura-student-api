@@ -1,0 +1,80 @@
+/var/jenkins_home/linux-lab/zholdas-zhannura-student-api
+./Dockerfile
+./Jenkinsfile
+./README.md
+./build.gradle
+./docker-compose.yml
+./logs/Zholdas_Zhannura_system_report.log
+./scripts/Zholdas_Zhannura_system_report.sh
+-rwxr--r-- 1 jenkins jenkins 738 Oct 29 22:53 scripts/Zholdas_Zhannura_system_report.sh
+System Monitoring Report
+Student Full Name: Zholdas Zhannura
+Date and Time: 2026-10-29T22:59:49+00:00
+Current Username: jenkins
+OS and Kernel: Linux 1996b994c08a 6.18.40.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.7
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+CPU Information:
+11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+Memory Information:
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       2.6Gi       1.0Gi        47Mi       4.3Gi       5.0Gi
+Swap:          2.0Gi       692Ki       2.0Gi
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdf       1007G   11G  946G   2% /var/jenkins_home
+Available Disk Space: 946G
+-rwxr-xr-x 1 jenkins jenkins 5676 Oct 29 22:59 backups/README_Zholdas_Zhannura.md
+# Student API by Zhannura Zholdas
+
+DevOps Midterm Assessment. Group IT2-2306, student ID 37742.
+
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+jenkins        1  0.1  0.0   2572  1536 ?        Ss   22:59   0:00 /usr/bin/tini -- /usr/local/bin/jenkins.sh
+jenkins        7 79.2  5.4 7794612 435716 ?      Sl   22:59   0:34 java -Duser.home=/var/jenkins_home -Djenkins.model.Jenkins.slaveAgentPort=50000 -Dhudson.lifecycle=hudson.lifecycle.ExitLifecycle -jar /usr/share/jenkins/jenkins.war
+jenkins      144 25.0  0.0   4496  3408 ?        Ss   22:59   0:00 bash -s
+jenkins      174 50.0  0.0   6796  4032 ?        R    22:59   0:00 ps aux
+jenkins      175  0.0  0.0   3028  1972 ?        S    22:59   0:00 head -n 8
+7 java -Duser.home=/var/jenkins_home -Djenkins.model.Jenkins.slaveAgentPort=50000 -Dhudson.lifecycle=hudson.lifecycle.ExitLifecycle -jar /usr/share/jenkins/jenkins.war
+Swap:          2.0Gi       692Ki       2.0Gi
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdf       1007G   11G  946G   2% /var/jenkins_home
+Available Disk Space: 946G
+Student Full Name: Zholdas Zhannura
+replace
+append
+744 scripts/Zholdas_Zhannura_system_report.sh
+
+Commands and diagnostics:
++ cd /var/jenkins_home/linux-lab/zholdas-zhannura-student-api
++ pwd
++ mkdir -p scripts logs backups src
++ :
++ find . -maxdepth 2 -type f
++ sort
++ chmod 744 scripts/Zholdas_Zhannura_system_report.sh
++ ls -l scripts/Zholdas_Zhannura_system_report.sh
++ ./scripts/Zholdas_Zhannura_system_report.sh
++ cp README.md backups/README_Zholdas_Zhannura.md
++ ls -l backups/README_Zholdas_Zhannura.md
++ cmp README.md backups/README_Zholdas_Zhannura.md
++ head -n 4 backups/README_Zholdas_Zhannura.md
++ ps aux
++ head -n 8
++ pgrep -af java
++ tail -n 5 logs/Zholdas_Zhannura_system_report.log
++ grep Zholdas logs/Zholdas_Zhannura_system_report.log
++ cat Zholdas_Zhannura_log_analysis.txt
++ printf 'replace\n'
++ printf 'append\n'
++ cat backups/redirection_demo.txt
++ stat -c '%a %n' scripts/Zholdas_Zhannura_system_report.sh

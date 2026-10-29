@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T22:52:55.856Z" hostname="HOME-PC" time="0.765">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplicationTests" time="0.003"/>
+  <system-out><![CDATA[2026-10-30T03:52:55.864+05:00  INFO 19936 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplicationTests]: ZholdasZhannuraStudentApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-30T03:52:55.868+05:00  INFO 19936 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplication for test class com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplicationTests
+2026-10-30T03:52:55.871+05:00  INFO 19936 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplicationTests]: ZholdasZhannuraStudentApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-30T03:52:55.873+05:00  INFO 19936 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplication for test class com.iitu.zholdas_zhannura_student_api.ZholdasZhannuraStudentApiApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-10-30T03:52:55.941+05:00  INFO 19936 --- [    Test worker] holdasZhannuraStudentApiApplicationTests : Starting ZholdasZhannuraStudentApiApplicationTests using Java 17.0.18 with PID 19936 (started by Zhannur in C:\Users\Akerke\OneDrive - Satbayev University\Рабочий стол\zholdas-zhannura-student-api)
+2026-10-30T03:52:55.942+05:00  INFO 19936 --- [    Test worker] holdasZhannuraStudentApiApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2026-10-30T03:52:56.163+05:00  INFO 19936 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-30T03:52:56.181+05:00  INFO 19936 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2026-10-30T03:52:56.257+05:00  INFO 19936 --- [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-30T03:52:56.308+05:00  INFO 19936 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-30T03:52:56.314+05:00  INFO 19936 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-30T03:52:56.316+05:00  INFO 19936 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:student_api_test user=SA
+2026-10-30T03:52:56.318+05:00  INFO 19936 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-30T03:52:56.319+05:00  INFO 19936 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:student_api_test]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: STUDENT_API_TEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-30T03:52:56.381+05:00  INFO 19936 --- [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-30T03:52:56.394+05:00  INFO 19936 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-30T03:52:56.471+05:00  WARN 19936 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-30T03:52:56.616+05:00  INFO 19936 --- [    Test worker] holdasZhannuraStudentApiApplicationTests : Started ZholdasZhannuraStudentApiApplicationTests in 0.733 seconds (process running for 12.265)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
